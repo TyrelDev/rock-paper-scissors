@@ -18,6 +18,10 @@ function getComputerChoice() {
 // Create a function for the human choice 
 
 function getPlayerChoice() {
-    
+    //Prompt player to select their choice
+    playerChoice = prompt('Please Select a Number. Rock: 0 , Paper: 1, Scissors: 2', 0);
+    return playerChoice;
+
 }
+console.log(getPlayerChoice());
 console.log(getComputerChoice());
