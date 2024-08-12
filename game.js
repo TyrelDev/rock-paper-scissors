@@ -26,5 +26,11 @@ function getPlayerChoice() {
     playerChoice = prompt('Please select a choice. Rock, Paper or Scissors', 'Rock');
     return playerChoice;
 }
+
+// Create the playround function 
+
+function playRound(computerChoice, playerChoice) {
+
+}
 console.log(getPlayerChoice());
 console.log(getComputerChoice());
