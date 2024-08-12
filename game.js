@@ -10,11 +10,11 @@ function getComputerChoice() {
     
     // Create if to condition the computer's choice
     if (computerChoice == 0){
-        return "Rock";
+        return "rock";
     }else if (computerChoice == 1){
-        return "Paper";
+        return "paper";
     }else {
-        return "Scissors";
+        return "scissors";
     }
 
 }
@@ -24,7 +24,7 @@ function getComputerChoice() {
 function getPlayerChoice() {
     //Prompt player to select their choice
     playerChoice = prompt('Please select a choice. Rock, Paper or Scissors', 'Rock');
-    return playerChoice;
+    return playerChoice.toLowerCase();
 }
 
 // Create the playround function 
