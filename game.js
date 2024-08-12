@@ -1,6 +1,3 @@
-// Variables to hold the score 
-let computerScore = 0,
-    playerScore = 0;
 
 // Create a function for the computer choice
 
@@ -27,8 +24,24 @@ function getPlayerChoice() {
     return playChoice.toLowerCase();
 }
 
-const computerChoice = getComputerChoice();
-const playerChoice = getPlayerChoice();
+
+function playGame() {
+    let rounds = 0,
+        playerScore = 0,
+        computerScore = 0;
+
+    while (rounds < 6 ){
+        let computerChoice = getComputerChoice(),
+            playerChoice = getPlayerChoice();
+
+        playRound(computerChoice, playerChoice);
+        rounds++;
+    }
+    if (playerScore > computerScore){
+        console.log("You have won the game!");
+    }else {
+        console.log("The computer won the game!");
+    }
 
 // Create the playround function 
 
@@ -52,5 +65,6 @@ function playRound(computerChoice, playerChoice) {
         console.log('The computer won, you lost!');
     }
 }
+}
 
-playRound(computerChoice, playerChoice);
+playGame()
