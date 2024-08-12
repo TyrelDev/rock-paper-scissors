@@ -1,1 +1,5 @@
-console.log("WOW!")
+// Create a function for the computer choice
+
+function getComputerChoice() {
+
+}
