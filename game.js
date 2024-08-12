@@ -20,7 +20,15 @@ function getComputerChoice() {
 function getPlayerChoice() {
     //Prompt player to select their choice
     playerChoice = prompt('Please Select a Number. Rock: 0 , Paper: 1, Scissors: 2', 0);
-    return playerChoice;
+
+    // Create if to condition the computer's choice
+    if (playerChoice == 0){
+        return "Rock";
+    }else if (playerChoice == 1){
+        return "Paper";
+    }else {
+        return "Scissors";
+    }
 
 }
 console.log(getPlayerChoice());
