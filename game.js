@@ -6,12 +6,12 @@ let computerScore = 0,
 
 function getComputerChoice() {
     // Randomly generate a number for the computer choice
-    computerChoice = Math.floor(Math.random() * 3) ;
+    compChoice = Math.floor(Math.random() * 3) ;
     
     // Create if to condition the computer's choice
-    if (computerChoice == 0){
+    if (compChoice == 0){
         return "rock";
-    }else if (computerChoice == 1){
+    }else if (compChoice == 1){
         return "paper";
     }else {
         return "scissors";
@@ -23,9 +23,12 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
     //Prompt player to select their choice
-    playerChoice = prompt('Please select a choice. Rock, Paper or Scissors', 'Rock');
-    return playerChoice.toLowerCase();
+    playChoice = prompt('Please select a choice. Rock, Paper or Scissors', 'Rock');
+    return playChoice.toLowerCase();
 }
+
+const computerChoice = getComputerChoice();
+const playerChoice = getPlayerChoice();
 
 // Create the playround function 
 
@@ -49,4 +52,5 @@ function playRound(computerChoice, playerChoice) {
         console.log('The computer won, you lost!');
     }
 }
-playRound(getComputerChoice(),getPlayerChoice());
+
+playRound(computerChoice, playerChoice);
