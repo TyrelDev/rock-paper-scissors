@@ -14,4 +14,10 @@ function getComputerChoice() {
     }
 
 }
+
+// Create a function for the human choice 
+
+function getPlayerChoice() {
+    
+}
 console.log(getComputerChoice());
