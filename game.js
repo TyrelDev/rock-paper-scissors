@@ -39,11 +39,13 @@ function playRound(computerChoice, playerChoice) {
         || computerChoice == 'paper' && playerChoice == 'scissors'
         || computerChoice == 'scissors' && playerChoice == 'rock'
     ){
+        playerScore++;
         console.log('You won, the computer lost!');
     }else if (computerChoice == 'rock' && playerChoice == 'scissors'
         || computerChoice == 'paper' && playerChoice == 'rock'
         || computerChoice == 'scissors' && playerChoice == 'paper'
     ){
+        computerScore++;
         console.log('The computer won, you lost!');
     }
 }
