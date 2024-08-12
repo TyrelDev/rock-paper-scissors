@@ -30,7 +30,21 @@ function getPlayerChoice() {
 // Create the playround function 
 
 function playRound(computerChoice, playerChoice) {
-
+    if (computerChoice == 'rock' && playerChoice == 'rock' 
+        || computerChoice == 'paper' && playerChoice == 'paper' 
+        || computerChoice == 'scissors' && playerChoice == 'scissors')
+        {
+        console.log("It's a tie!");
+    }else if (computerChoice == 'rock' && playerChoice == 'paper'
+        || computerChoice == 'paper' && playerChoice == 'scissors'
+        || computerChoice == 'scissors' && playerChoice == 'rock'
+    ){
+        console.log('You won, the computer lost!');
+    }else if (computerChoice == 'rock' && playerChoice == 'scissors'
+        || computerChoice == 'paper' && playerChoice == 'rock'
+        || computerChoice == 'scissors' && playerChoice == 'paper'
+    ){
+        console.log('The computer won, you lost!');
+    }
 }
-console.log(getPlayerChoice());
-console.log(getComputerChoice());
+playRound(getComputerChoice(),getPlayerChoice());
